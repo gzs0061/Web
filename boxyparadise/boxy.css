@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.imageleft,
+.imageright {
+    display: block;
+    margin: 0 auto 15px auto;
+
+}
+
+/* ==============
+
+GLOBAL STYLE
+
+=============== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 110%;
+    background-color: #FCA3A5;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0 0 1em 0;
+}
+
+table {
+    width: 90%;
+    margin: 5% auto 0 auto;
+}
+
+th {
+    border-bottom: solid 2px #A20D0F;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px 5px;
+    border-bottom: dotted 1px #A20D0F;
+}
+
+strong {
+    font-weight: bold;
+}
+
+#centerwrap {
+    border: #A20D0F thick solid;
+}
+
+header {
+    line-height: 0;
+}
+nav {
+	border-bottom: 1px solid #600; 
+    line-height: 1;
+}
+
+nav li {
+    list-style-type: none;
+	text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #444;
+}
+
+nav li a {
+    background-color: #A20D0F;
+	display: block;
+	padding: 20px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFF;
+
+    
+}
+
+nav .active a {
+    background-color: #FCA3A5;
+}
+
+nav li a:hover {
+	color: #000;
+	background-color: #FCA3A5;
+}
+
+
+#leftcol {
+    padding: 10px 2%;
+}
+
+#leftcol li {
+    font-family: Georgia, "Times New Roman", serif;
+    list-style-type: square;
+    margin-left: 20px;
+    
+}
+
+#rightcol {
+    padding: 10px 2%;
+    background-color: #F93539;
+}
+
+footer {
+    background-color: #A20D0F;
+    padding: 25px 0 15px 0;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: x-small;
+    font-style: italic;
+}
+
+.mobileoff {
+    display: none;
+}
+/* iframe responsive */
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Contact Form */
+
+#contactform label,
+#contactform input,
+#contactform textarea {
+    display:block;
+    width:100%;
+}
+
+#contactform input,
+#contactform textarea {
+    margin-bottom: 10px;
+}
+
+
+/* =============
+
+RESPONSIVE STYLE
+
+=============== */
+
+/* Desktop Range */
+@media(min-width: 900px) {
+    
+    body {
+        font-size: 120%;
+    }
+
+    #centerwrap {
+        max-width: 900px;
+        margin: 0 auto;
+
+    }
+
+    nav {
+        overflow: hidden;
+    }
+
+    nav li {
+        float: left;
+        width: calc(100%/5);
+    }
+
+    nav li a {
+        border-right: 2px solid #600;
+    }
+
+    nav li:first-child a {
+        border-left: 2px solid #600;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 35% 65%;
+    }
+
+    .imageleft {
+        float: left;
+        margin: 0 20px 10px 0;
+    }
+
+    .imageright {
+        float: right;
+        margin: 0 0 10px 20px;
+    }
+    
+    .mobileoff {
+        display: block;
+    }
+    
+    .mobileon {
+        display: none;
+    }
+    /* Contact Form */
+    
+    #contactform {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    
+    #contactform label {
+        width: auto;
+        text-align: right;
+        padding-right: 10px;
+    }
+    
+    #contactform button {
+        grid-column: 2 / 3;
+        width: 110px;
+    }
+    
+}
+
+/* TABLET RANGE */
+@media (min-width: 650px) and (max-width: 899px) {
+    
+    body {
+        font-size: 100%;
+    }
+
+     nav {
+        overflow: hidden;
+    }
+
+    nav li {
+        float: left;
+        width: calc(100%/5);
+    }
+
+    nav li a {
+        border-right: 2px solid #600;
+    }
+
+    nav li:first-child a {
+        border-left: 2px solid #600;
+    }
+    .mobileoff {
+        display: block;
+    }
+    
+    .mobileon {
+        display: none;
+    }
+    
+/* Contact Form */
+    
+    #contactform {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+    
+    #contactform label {
+        width: auto;
+        text-align: right;
+        padding-right: 10px;
+    }
+    
+    #contactform button {
+        grid-column: 2 / 3;
+        width: 110px;
+    }
+}
